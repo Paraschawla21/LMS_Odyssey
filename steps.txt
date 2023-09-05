@@ -1,0 +1,10 @@
+step1) connect the mongodb
+
+          -> cd backend
+          -> npm run dev
+
+step2) add a course any name with image jpg or jpeg url
+
+step3) write that course name into the section and add a video url from youtube
+
+        -> three dots -> share -> Embed -> only src url (just from https to where it ends)
