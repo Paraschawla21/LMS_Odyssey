@@ -16,7 +16,8 @@ const SectionCreationForm = () => {
         console.log("Section Video:", sectionVideo);
         console.log("Section Video URL:", sectionVideoURL);
 
-        const sectionURL = "https://odyssey-backend.onrender.com/newSection";
+        const sectionURL =
+            "https://odysseybackend-8zy5.onrender.com/newSection";
 
         Axios.put(
             sectionURL,

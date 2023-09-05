@@ -4,7 +4,6 @@ import Axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -31,28 +30,32 @@ const Register = () => {
 
         console.log(formData);
 
-        // const regURL = "http://localhost:5000/api/users/register"
-        const regURL = "https://odyssey-backend.onrender.com/api/users/register";
+        const regURL =
+            "https://odysseybackend-8zy5.onrender.com/api/users/register";
 
         Axios.post(regURL, {
-          name,
-          email,
-          password,
-        }).then((response) => {
-            console.log(response);
-            alert("Registration successful");
-            navigate("/login");
-        }).catch((error) => {
-            console.log(error);
-            alert("Registration failed");
-        });
-
+            name,
+            email,
+            password,
+        })
+            .then((response) => {
+                console.log(response);
+                alert("Registration successful");
+                navigate("/login");
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Registration failed");
+            });
     };
 
     return (
         <section class="text-gray-600 body-font">
             <div class="container px-5 py-16 mx-auto flex flex-wrap items-center">
-                <form onSubmit={handleSubmit} class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0">
+                <form
+                    onSubmit={handleSubmit}
+                    class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0"
+                >
                     <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
                         Sign Up
                     </h2>
