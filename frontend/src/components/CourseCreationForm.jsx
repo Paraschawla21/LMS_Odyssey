@@ -8,11 +8,6 @@ const CourseCreationForm = () => {
     const [level, setLevel] = useState("");
     const [categoryName, setCategoryName] = useState("");
     const [courseImage, setCourseImage] = useState("");
-    // const [authorImage, setAuthorImage] = useState("");
-
-    // const [startDate, setStartDate] = useState(null);
-    // const [endDate, setEndDate] = useState(null);
-    // const [numSessions, setNumSessions] = useState(0);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -33,7 +28,6 @@ const CourseCreationForm = () => {
             level: level,
             category: categoryName,
             courseImage: courseImage,
-            // authorImage: authorImage,
         })
             .then((response) => {
                 console.log(response);
@@ -134,21 +128,6 @@ const CourseCreationForm = () => {
                         onChange={(e) => setCourseImage(e.target.value)}
                     />
                 </div>
-                {/* <div className="form-group">
-          <label htmlFor="authorImage" className="form-label">
-            Author Image:
-          </label>
-          <input
-            className="form-control"
-            type="file"
-            alt="authorImage"
-            id="authorImage"
-            accept="image/*"
-            value={authorImage}
-            onChange={(e) => setAuthorImage(e.target.value)}
-          />
-        </div> */}
-
                 <div className="form-group">
                     <button className="btn" type="submit">
                         {" "}

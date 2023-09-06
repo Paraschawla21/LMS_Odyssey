@@ -22,7 +22,6 @@ const courseSchema = Schema(
         ],
         category: { type: String, required: true },
         course_img: { type: String, default: "" },
-        // author_img: { type: String, default: "" },
     },
     {
         timestamps: true,

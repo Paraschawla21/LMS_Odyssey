@@ -9,4 +9,4 @@ const quizSchema = new Schema({
     quiz_answer: { type: String, required: true },
 });
 
-module.exports= mongoose.model('Quiz', quizSchema);
+module.exports = mongoose.model("Quiz", quizSchema);

@@ -16,18 +16,6 @@ const Hero = () => {
                         through interactive methods, 24/7 access and community
                         support.
                     </p>
-                    {/* <div className="flex justify-center">
-                        <a href="register">
-                            <button className="inline-flex rounded-md text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                                Sign Up
-                            </button>
-                        </a>
-                        <a href="login">
-                            <button className="ml-4 inline-flex rounded-md text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">
-                                Login
-                            </button>
-                        </a>
-                    </div> */}
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                     <img

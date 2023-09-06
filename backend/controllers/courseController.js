@@ -9,7 +9,7 @@ const Quiz = require("../models/quizModel");
 // @route GET /api/courses
 // @access Public
 
-const getCourses = asyncHandler(async(req, res) => {
+const getCourses = asyncHandler(async (req, res) => {
     const courses = await Course.find();
     res.status(200).json(courses);
 });
@@ -18,12 +18,12 @@ const getCourses = asyncHandler(async(req, res) => {
 // @route GET /api/courses/all
 // @access Public
 
-const getAllCourses = asyncHandler(async(req, res) => {
+const getAllCourses = asyncHandler(async (req, res) => {
     const courses = await Course.find();
     res.status(200).json(courses);
 });
 
-const getCoursesById = asyncHandler(async(req, res) => {
+const getCoursesById = asyncHandler(async (req, res) => {
     id = req.params.id;
     const course = await Course.findById(id).populate("sections");
     res.status(200).json(course);
@@ -32,13 +32,7 @@ const getCoursesById = asyncHandler(async(req, res) => {
 // @route POST /api/Courses/addcourse
 // @access Private
 
-const setCourse = asyncHandler(async(req, res) => {
-    // if(!req.body.course_name ){
-    //     res.status(400)
-    //     throw new Error('Please add a course name field')
-    // }
-    // const course = await Course.create(req.body)
-    // res.status(200).json({data : course})
+const setCourse = asyncHandler(async (req, res) => {
     // Create a new course
     const course = new Course({
         course_name: req.body.course_name,
@@ -116,7 +110,7 @@ const setCourse = asyncHandler(async(req, res) => {
 // @route PUT /api/courses/:id
 // @access Private
 
-const updateCourse = asyncHandler(async(req, res) => {
+const updateCourse = asyncHandler(async (req, res) => {
     const course = await Course.findById(req.params.id);
 
     if (!course) {
@@ -125,7 +119,8 @@ const updateCourse = asyncHandler(async(req, res) => {
     }
     const updatedCourse = await Course.findByIdAndUpdate(
         req.params.id,
-        req.body, { new: true }
+        req.body,
+        { new: true }
     );
 
     res.status(200).json(updatedCourse);
@@ -134,7 +129,7 @@ const updateCourse = asyncHandler(async(req, res) => {
 // @route DELETE /api/goals/:id
 // @access Private
 
-const deleteCourse = asyncHandler(async(req, res) => {
+const deleteCourse = asyncHandler(async (req, res) => {
     const course = await Course.findById(req.params.id);
 
     if (!course) {

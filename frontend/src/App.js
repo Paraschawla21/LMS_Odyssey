@@ -15,27 +15,34 @@ import CreateCourse from "./pages/CreateCourse";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  return (
-    <>
-      <Router>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/createcourse" element={<CreateCourse />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route exact path="/courses/:id" element={<CourseDetail />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </>
-  );
+    return (
+        <>
+            <Router>
+                <div>
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />{" "}
+                        <Route path="/login" element={<Login />} />{" "}
+                        <Route path="/register" element={<Register />} />{" "}
+                        <Route
+                            path="/createcourse"
+                            element={<CreateCourse />}
+                        />{" "}
+                        <Route path="/courses" element={<Courses />} />{" "}
+                        <Route
+                            exact
+                            path="/courses/:id"
+                            element={<CourseDetail />}
+                        />{" "}
+                        <Route path="/About" element={<About />} />{" "}
+                        <Route path="/contact" element={<Contact />} />{" "}
+                        <Route path="*" element={<NotFound />} />{" "}
+                    </Routes>{" "}
+                    <Footer />
+                </div>{" "}
+            </Router>{" "}
+        </>
+    );
 }
 
 export default App;
